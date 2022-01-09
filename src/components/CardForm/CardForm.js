@@ -14,7 +14,7 @@ const CardForm = props => {
   return (
     <div className={styles.formWrapper}>
       <form className={styles.cardForm} onSubmit={handleSubmit}>
-        <label className={styles.label}>Add:</label> <TextInput value={title} onChange={e => setTitle(e.target.value)} />
+        <TextInput value={title} onChange={e => setTitle(e.target.value)} />
         <Button>Add card</Button>
       </form>
     </div>
