@@ -10,7 +10,7 @@ const SearchForm = () => {
   const [searchString, setSearchString] = useState('')
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(updateSearchstring({searchString}));
+    dispatch(updateSearchstring(searchString));
   }
   return (
     <form className={styles.searchForm} onSubmit={handleSubmit}>
