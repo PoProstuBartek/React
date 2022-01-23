@@ -31,3 +31,13 @@
     font-size: 18px;
   }
 }
+
+a {
+  color: $color-light;
+  text-decoration: none;
+}
+
+.linkActive {
+  color: $color-warning;
+  transition: 0.5s;
+}
