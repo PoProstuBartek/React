@@ -1,0 +1,20 @@
+@use "sass:math";
+@import '../../styles/settings.scss';
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+
+  .column {
+    background: $color-light;
+    border-radius: $radius;
+    color: $color-dark;
+
+      .cards {
+        padding: 25px;
+      }
+    }
+  }
