@@ -4,19 +4,21 @@ import shortid from 'shortid';
 import strContains from '../utils/strContains';
 
 //selectors
-export const getFilteredCards = ({ cards, searchString }, columnId) => cards
+export const getFilteredCards = ({cards, searchString}, columnId) => cards
   .filter(card => card.columnId === columnId && strContains(card.title, searchString));
 
 export const getAllColumns = state => state.columns;
 
-export const getAllLists = ({ lists }) => lists;
+export const getAllLists = ({lists}) => lists;
 
 export const getListById = ({lists}, listId) => lists.find(list => list.id === listId);
 
-export const getColumnsByList = ({ columns }, listId) => columns
+export const getColumnsByList = ({columns}, listId) => columns
   .filter(column => column.listId ===  listId);
 
-export const getFilteredFavoriteCards = ({ cards }) => cards.filter(card => card.isFavorite === true);
+export const getCardsById = ({cards}, cardId) => cards.find(card => card.id === cardId);
+
+export const getFilteredFavoriteCards = ({cards}) => cards.filter(card => card.isFavorite === true);
 
 // action creators
 export const addColumn = payload => ({ type: 'ADD_COLUMN', payload });
@@ -27,7 +29,7 @@ export const updateSearchstring = payload => ({ type: 'UPDATE_SEARCHSTRING', pay
 
 export const addList = payload => ({ type: 'ADD_LIST', payload });
 
-export const getToggleCardFavorite = payload => ({type: 'TOGGLE_CARD_FAVORITE', payload})
+export const toggleCardFavorite = payload => ({type: 'TOGGLE_CARD_FAVORITE', payload})
 
 const reducer = (state, action) => {
   switch(action.type) {

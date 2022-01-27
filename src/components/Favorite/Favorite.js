@@ -5,12 +5,11 @@ import styles from './Favorite.module.scss'
 import Card from '../Card/Card';
 
 const Favorite = () => {
-  const cards = useSelector(state => getFilteredFavoriteCards(state));
-  
-  if(cards.length === 0) 
-  return (
+  const cards = useSelector(getFilteredFavoriteCards);
+  if(!cards.length) 
+    return (
       <PageTitle>No favorite cards ... yet!</PageTitle>
-  )
+    );
 
   return (
       <div className={styles.container}>
