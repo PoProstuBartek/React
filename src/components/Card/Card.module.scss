@@ -12,9 +12,13 @@
     font-weight: bold;
 }
 
+.buttonWrapper {
+    display: flex;
+}
+
 .icon{
     margin: 0;
-    padding: 0;
+    padding: 2px;
 }
 .buttonFavorite{
     background-color: white;
