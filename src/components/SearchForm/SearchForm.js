@@ -2,8 +2,18 @@ import styles from './SearchForm.module.scss';
 import TextInput from '../TextInput/TextInput';
 import Button from '../Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { updateSearchstring } from '../../redux/searchStringRedux';
+
+const useUnmount = (func) => {
+  useEffect(() => {
+    return () => {
+      func();
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+};
+
 
 const SearchForm = () => {
   const dispatch = useDispatch();
@@ -14,6 +24,9 @@ const SearchForm = () => {
     dispatch(updateSearchstring(searchString));
     //setSearchString();
   }
+
+  useUnmount(() => dispatch(updateSearchstring('')));
+
   return (
     <form className={styles.searchForm} onSubmit={handleSubmit}>
       <TextInput placeholder={placeholder} value={searchString} onChange={e => setSearchString(e.target.value)}/>
@@ -22,6 +35,6 @@ const SearchForm = () => {
       </Button>
     </form>
   );
-  };
+};
 
   export default SearchForm;

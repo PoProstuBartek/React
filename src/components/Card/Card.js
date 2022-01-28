@@ -14,8 +14,9 @@ const Card = ({cardId, title}) => {
     e.preventDefault();
     dispatch(removeFavorite( cardId ))
   }
-  const cardData = useSelector(state => getCardsById(state, cardId));
-  const isFavorite = cardData.isFavorite;
+  
+  const { isFavorite } = useSelector(state => getCardsById(state, cardId));
+  
   return (
     <li className={styles.card}>{title}
       <div className={styles.buttonWrapper}>
