@@ -1,0 +1,17 @@
+@import '../../styles/settings.scss';
+
+.select {
+  background: $color-light;
+  border: 1px solid lighten($color-dark, 60%);
+  padding: $base-size ($base-size * 1.5);
+  margin: 0 0 $base-size 0;
+  font-family: 'FontAwesome', 'Second Font name';
+  border-radius: $radius;
+  font-size: 22px;
+  color: #e1644e;
+  
+  option {
+    font-size: 26px;
+    color: #e1644e;
+  }
+}

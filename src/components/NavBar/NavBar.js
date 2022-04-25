@@ -5,7 +5,6 @@ const NavBar = () => {
   return (
     <nav className={styles.navBar}>
       <div className={styles.container}>
-        <span className={styles.icon + ' fa fa-tasks'} />
         <ul className={styles.list}>
           <li><NavLink className={({ isActive }) => isActive ? styles.linkActive : null} to="/">Home</NavLink></li>
           <li><NavLink className={({ isActive }) => isActive ? styles.linkActive : null} to="/favorite">Favorite</NavLink></li>

@@ -4,6 +4,7 @@ import TextInput from '../TextInput/TextInput';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addColumn } from '../../redux/columnsRedux';
+import IconSelect from '../IconSelect/IconSelect';
 
 const ColumnForm = ({listId}) => {
   const dispatch = useDispatch();
@@ -20,7 +21,7 @@ const ColumnForm = ({listId}) => {
     <div className={styles.formWrapper}>
       <form className={styles.columnFrom} onSubmit={handleSubmit}>
         <label className={styles.label}>Title:</label> <TextInput value={title} onChange={e => setTitle(e.target.value)}/>
-        <label className={styles.label}>Icon:</label> <TextInput value={icon} onChange={e => setIcon(e.target.value)}/>
+        <label className={styles.label}>Icon:</label> <IconSelect value={icon} onChange={e => setIcon(e.target.value)}/>
         <Button>ADD COLUMN</Button>
       </form>
     </div>
