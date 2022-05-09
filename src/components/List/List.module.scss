@@ -1,14 +1,14 @@
 @import '../../styles/settings.scss';
 
 .header {
-    background-image: url('http://uploads.kodilla.com/bootcamp/fer/11.react/space.png');
+    background-image: url('https://i.postimg.cc/sX9zBRCY/rocket.png');
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
     height: ($base-size * 15);
     margin: 0 0 ($base-size * 3) 0;
     overflow: hidden;
-    border-radius: $radius;
+    border-radius: ($radius * 10);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,6 +18,7 @@
     font-size: ($base-size * 2.5);
     text-transform: uppercase;
     color: $color-light;
+    text-shadow: 4px 4px $color-dark;
 
     span {
         font-size: 75%;
