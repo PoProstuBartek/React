@@ -2,6 +2,7 @@ import styles from './IconSelect.module.scss';
 
 const IconSelect = (props) => {
   return <select className={styles.select} value={props.value} onChange={props.onChange}>
+    <option value=""></option>
     <option value="music">&#xf001;</option>
     <option value="book">&#xf02d;</option>
     <option value="film">&#xf008;</option>
